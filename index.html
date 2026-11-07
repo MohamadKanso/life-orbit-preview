@@ -1,16 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Life Orbit is a personal life OS for calendars, routines, goals, tasks, and private social planning."
-    />
-    <link rel="icon" type="image/svg+xml" href="/life-orbit-preview/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Life Orbit — the anti-feed. See when your people are free, send a signal, and turn it into real plans, calls and time together." />
+    <meta name="theme-color" content="#08080a" />
+    <meta property="og:title" content="Life Orbit" />
+    <meta property="og:description" content="The anti-feed. Your people, in orbit." />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
     <title>Life Orbit</title>
-    <script type="module" crossorigin src="/life-orbit-preview/assets/index-D_2c9G3B.js"></script>
-    <link rel="stylesheet" crossorigin href="/life-orbit-preview/assets/index-DYh7ciqw.css">
+    <script>
+      try {
+        var t = localStorage.getItem("lo-theme");
+        if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+        else if (window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches) document.documentElement.dataset.theme = "light";
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="/life-orbit-preview/assets/index-BdZKzaT_.js"></script>
+    <link rel="stylesheet" crossorigin href="/life-orbit-preview/assets/index-DSow_V15.css">
   </head>
   <body>
     <div id="root"></div>
